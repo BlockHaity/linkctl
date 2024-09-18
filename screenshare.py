@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+
+print(r'不要独立运行')
+
 def screenshare(mode, audiomod, btmac):
     # 导入必要的模块
     import os
@@ -23,6 +27,7 @@ def screenshare(mode, audiomod, btmac):
         subprocess.run([r'notify-send',r'linkctl:screenshare提醒',r'你正在使用无线连接，我们建议使用有线连接以获得更好的体验。'])
 
     if audiomod == 'scrcpy':
+        subprocess.run([])
         subprocess.run(['scrcpy', '--keyboard=uhid', '--require-audio'])
     else:
         subprocess.run(['scrcpy', '--no-audio', '--keyboard=uhid'])
